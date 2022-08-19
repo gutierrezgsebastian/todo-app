@@ -1,0 +1,13 @@
+FROM python:3.10-bullseye
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /code/usr/src/app/
+RUN apt-get update && \
+    apt-get install python3-dev libpq-dev --yes && \
+    mkdir -p /usr/src/app/ && \
+    pip install --upgrade pip setuptools wheel && \
+    pip install pipenv
+COPY ./Pipfile ./Pipfile
+RUN pipenv install --deploy --ignore-pipfile

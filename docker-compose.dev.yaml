@@ -1,0 +1,29 @@
+name: react-fastapi
+services:
+
+  backend:
+    container_name: contenedor_backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile.dev.python
+    restart: always
+    volumes:
+      - ./backend/:/code/usr/src/app/
+    command: pipenv run uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+
+  frontend:
+    container_name: contenedor_frontend
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile.dev.javascript
+    volumes:
+      - ./frontend/:/code/usr/src/app/
+    command: npm start
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+# volumes:
+#   volumen_postgres:
