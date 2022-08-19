@@ -1,8 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
+import List from "../../components/List/List";
 import "./ListPage.scss";
 
 const ListPage = () => {
-  return <div>ListPage</div>;
+  return (
+    <Fragment>
+      <List />
+    </Fragment>
+  );
 };
 
 export default ListPage;

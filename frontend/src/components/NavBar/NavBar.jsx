@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./NavBar.scss";
 
 const NavBar = () => {
-  return (
-    <div>NavBar</div>
-  )
-}
+  return <nav>NavBar</nav>;
+};
 
-export default NavBar
+export default NavBar;
