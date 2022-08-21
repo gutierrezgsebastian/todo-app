@@ -12,13 +12,11 @@ from logica.http_methods_data import (
 app = FastAPI()
 
 
-<<<<<<< HEAD
 @app.get("/")
 def get_root():
     return {"message": "Hello World"}
 
 
-=======
 @app.get("/v1/get_tarea/{tarea_id}")
 def get_tarea(tarea_id: int):
     """Obtiene una tarea específica."""
@@ -54,4 +52,3 @@ def put_toggle_tarea(tarea_id: int, tarea: TareaTypeActualizar | None = None):
 def delete_tarea(tarea_id: int):
     """Eliminar una tarea específica."""
     return tarea_delete_json(tarea_id)
->>>>>>> feature/api
