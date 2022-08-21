@@ -7,9 +7,9 @@ name = "pypi"
 fastapi = {extras = ["all"], version = "*"}
 numpy = "*"
 pandas = "*"
+six = "*"
 
 [dev-packages]
-black = "*"
 bandit = "*"
 flake8 = "*"
 mypy = "*"
@@ -21,6 +21,3 @@ prospector = "*"
 
 [requires]
 python_version = "3.10"
-
-[pipenv]
-allow_prereleases = true
