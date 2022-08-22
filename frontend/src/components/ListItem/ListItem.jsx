@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import List from "../List/List";
 
 const ListItem = () => {
   return (
-    <div>ListItem</div>
-  )
-}
+    <div>
+      <List />
+    </div>
+  );
+};
 
-export default ListItem
+export default ListItem;
