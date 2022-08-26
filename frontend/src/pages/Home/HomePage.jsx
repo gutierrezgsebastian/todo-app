@@ -24,13 +24,10 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Header />
-      <NavBar />
-      <main>
-        <Outlet />
-      </main>
-      <SideBar />
-      <Footer />
+      
+      
+      <h1>Home page</h1>
+      
     </Fragment>
   );
 };
