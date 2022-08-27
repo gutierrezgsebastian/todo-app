@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+
+.home{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'DynaPuff', cursive;
+    font-size: 50px;
+}
+
+.flex-container-home{
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-around;
+    gap: 70px;
+
+    
+
+    .contenido{
+        padding: 10px;
+    }
+    .nota{
+        border-radius: 20px;
+        height: 250px;
+        width: 250px;
+        background-color: #fff7d1;
+
+        .opciones{
+
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff2ab;
+            height: 25px;
+
+            .add{
+                margin-top: 5px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+
+            .opciones-two{
+                margin-top: 5px;
+                margin-right: 5px;
+                display: flex;
+            }
+
+            .edit{
+                margin-right: 5px;
+                cursor: pointer;
+            }
+
+            .delete{
+                cursor: pointer;
+            }
+        }
+
+        
+        .titulo{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .parrafo{
+
+        }
+    }
+}

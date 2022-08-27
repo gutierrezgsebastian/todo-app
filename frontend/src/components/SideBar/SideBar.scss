@@ -1,0 +1,29 @@
+.sidebar {
+  width: 500px;
+  height: 100vh;
+  background-color: #503ae0;
+  position: absolute;
+  transition: all 1s;
+
+  .news {
+    margin-top: 8px;
+    display: block;
+    float: right;
+    font-size: 40px;
+    margin-right: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .titulo {
+    text-emphasis: center;
+  }
+}
+
+.desactivate {
+  transform: translateX(-450px);
+}
+
+.botones {
+  display: flex;
+}
