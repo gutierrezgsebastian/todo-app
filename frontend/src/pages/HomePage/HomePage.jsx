@@ -39,7 +39,7 @@ const HomePage = () => {
       <SideBar isOpen={toggle} fnToggle={fnToggle}/> 
       
 
-      <h1 className="home">Agrega una nota</h1>
+      <h1 className="home">Notas</h1>
       <div className="flex-container-home">
         
         <div className="nota">

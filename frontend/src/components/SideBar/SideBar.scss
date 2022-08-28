@@ -5,28 +5,53 @@
   position: absolute;
   transition: all 1s;
 
+  .estado{
+    margin-bottom: 5px;
+  }
+  label{
+    display: block;
+  }
+
+  
   .informacion{
-    width: 70%;
+    border-radius: 5px;
+    width: 50%;
     margin: 0 auto;
     margin-top: 15px;
+    background-color: yellow;
+    padding: 30px;
+    box-shadow: 5px 5px 10px;
+
+    .input_field{
+      margin-bottom: 15px;
+
+      label{
+        display: block;
+        width: 100%;
+        color: black;
+        margin-bottom: 2px;
+      }
+
+      input{
+        width: 100%;
+        padding: 5px;
+        border: 0;
+        border-radius: 5px;
+      }
+
+      textarea{
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        padding: 5px;
+        height: 100px;
+      }
+    }
 
     .datos-informacion{
       font-size: 20px;
     }
-
     
-  }
-
-  
-
-  .news {
-    margin-top: 8px;
-    display: block;
-    float: right;
-    font-size: 40px;
-    margin-right: 5px;
-    color: white;
-    cursor: pointer;
   }
 
   .titulo {
