@@ -5,6 +5,20 @@
   position: absolute;
   transition: all 1s;
 
+  .informacion{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 15px;
+
+    .datos-informacion{
+      font-size: 20px;
+    }
+
+    
+  }
+
+  
+
   .news {
     margin-top: 8px;
     display: block;
@@ -17,11 +31,13 @@
 
   .titulo {
     text-emphasis: center;
+    text-align: center;
+    margin-top: 10px;
   }
 }
 
 .desactivate {
-  transform: translateX(-450px);
+  transform: translateX(-550px);
 }
 
 .botones {

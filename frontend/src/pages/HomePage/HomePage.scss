@@ -19,7 +19,7 @@
     
 
     .contenido{
-        padding: 10px;
+        padding: 10px 20px 0px 20px;
     }
     .nota{
         border-radius: 20px;
@@ -29,21 +29,19 @@
 
         .opciones{
 
-            border-radius: 20px;
+            border-radius: 20px 20px 0px 0px;
             display: flex;
             justify-content: space-between;
             background-color: #fff2ab;
             height: 25px;
 
             .add{
-                margin-top: 5px;
-                margin-left: 5px;
+                margin: 7px 0px 0px 7px;
                 cursor: pointer;
             }
 
             .opciones-two{
-                margin-top: 5px;
-                margin-right: 5px;
+                margin: 7px 7px 0px 0px;
                 display: flex;
             }
 
@@ -56,11 +54,12 @@
                 cursor: pointer;
             }
         }
-
         
         .titulo{
             text-align: center;
             margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: bold;
         }
         
     }

@@ -4,13 +4,17 @@ import SideBar from "../../components/SideBar/SideBar";
 import { AiFillDelete } from 'react-icons/ai';
 import { GrAddCircle } from 'react-icons/gr';
 import { AiFillEdit } from 'react-icons/ai';
-
-
 import "./HomePage.scss";
 
 const HomePage = () => {
+
+  const [toggle, setToggle] = useState(false)
+
   const [tareasState, setState] = useState([]);
 
+  const fnToggle = () =>{
+    setToggle((value) => !value)
+  }
 
   const getNotas = async () => {
     let url = urlServer;
@@ -32,7 +36,7 @@ const HomePage = () => {
   return (
     <Fragment>
       {/* Se le debe pasar al sidebar si se quiere agregar o actualizar */}
-      <SideBar /> 
+      <SideBar isOpen={toggle} fnToggle={fnToggle}/> 
       
 
       <h1 className="home">Agrega una nota</h1>
@@ -40,7 +44,7 @@ const HomePage = () => {
         
         <div className="nota">
           <div className="opciones">
-            <div className="add">
+            <div className="add" onClick={()=>{fnToggle()}}>
              <GrAddCircle/>
             </div>
             <div className="opciones-two">
@@ -60,7 +64,7 @@ const HomePage = () => {
 
         <div className="nota">
           <div className="opciones">
-            <div className="add">
+            <div className="add" onClick={() => {setToggle((value) => !value)}}>
              <GrAddCircle/>
             </div>
             <div className="opciones-two">
