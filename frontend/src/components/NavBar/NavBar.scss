@@ -1,34 +1,40 @@
 @use "../../styles/colors";
 
-.flex-container{
-    background-color: colors.$header;
-    display: flex;
-    justify-content: space-between;
+.flex-container {
+  background-color: colors.$header;
+  display: flex;
+  justify-content: space-between;
 
-    .element{
-      padding: 8px 8px 8px 8px;
-      list-style-type: none;
-      border-radius: 30px;
-      margin-left: 10px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+  .element {
+    padding: 8px 8px 8px 8px;
+    list-style-type: none;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
-  
-  .element:hover{
-      background-color: colors.$header_hover; 
-      color: white;
-      cursor: pointer;
+
+  .element:hover {
+    background-color: colors.$header_hover;
+    color: white;
+    cursor: pointer;
   }
-  
 }
 
-.datos{
+.datos {
   margin-left: 50px;
-}  
+}
 
-.registro{
+.registro {
   margin-right: 40px;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
 
-
+.active {
+  color: rgb(255, 247, 209);
+  border-bottom: 3px solid white;
+}
