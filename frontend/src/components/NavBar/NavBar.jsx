@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
 
 const NavBar = () => {
@@ -6,15 +7,39 @@ const NavBar = () => {
     <>
       <nav className="flex-container">
         <ul className="flex-container datos">
-          <li className="element">Inicio</li>
-          <li className="element">Informacion</li>
-          <li className="element">Vision</li>
-          <li className="element">Contacto</li>
+          <li className="element">
+            <NavLink className="link" to="/">
+              Inicio
+            </NavLink>
+          </li>
+          <li className="element">
+            <NavLink className="link" to="/info">
+              Información
+            </NavLink>
+          </li>
+          <li className="element">
+            <NavLink className="link" to="/">
+              Vision
+            </NavLink>
+          </li>
+          <li className="element">
+            <NavLink className="link" to="/">
+              Contacto
+            </NavLink>
+          </li>
         </ul>
 
         <ul className="flex-container registro">
-          <li className="element">Ingresar</li>
-          <li className="element">Registrarse</li>
+          <li className="element">
+            <NavLink className="link" to="#">
+              Ingresar
+            </NavLink>
+          </li>
+          <li className="element">
+            <NavLink className="link" to="#">
+              Registrarse
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </>
