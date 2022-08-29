@@ -18,12 +18,12 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="element">
-            <NavLink className="link" to="/">
+            <NavLink className="link" to="/vision">
               Vision
             </NavLink>
           </li>
           <li className="element">
-            <NavLink className="link" to="/">
+            <NavLink className="link" to="/contact">
               Contacto
             </NavLink>
           </li>
@@ -31,12 +31,12 @@ const NavBar = () => {
 
         <ul className="flex-container registro">
           <li className="element">
-            <NavLink className="link" to="#">
+            <NavLink className="link" to="/login">
               Ingresar
             </NavLink>
           </li>
           <li className="element">
-            <NavLink className="link" to="#">
+            <NavLink className="link" to="/register">
               Registrarse
             </NavLink>
           </li>
