@@ -1,31 +1,24 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { urlServer } from "../../components/config/GeneralFunction";
+import { urlGetAll } from "../../components/config/generalFunction";
 import SideBar from "../../components/SideBar/SideBar";
 import NavBar from "../../components/NavBar/NavBar";
 import { AiFillDelete } from "react-icons/ai";
 import { GrAddCircle } from "react-icons/gr";
 import { AiFillEdit } from "react-icons/ai";
 import "./HomePage.scss";
+import { httpGetTareas } from "../../helpers/httpMethods.js";
 
 const HomePage = () => {
   const [toggle, setToggle] = useState(false);
 
-  const [tareasState, setState] = useState([]);
+  const [tareasState, setTareasState] = useState([]);
 
   const fnToggle = () => {
     setToggle((value) => !value);
   };
 
   const getNotas = async () => {
-    let url = urlServer;
-    fetch(url)
-      .then((response) => {
-        if (response.status === 200) {
-          let datos = response.json();
-          return datos;
-        }
-      })
-      .then((data) => setState(data));
+    httpGetTareas(urlGetAll, setTareasState);
   };
 
   useEffect(() => {
