@@ -1,3 +1,5 @@
-id,tarea,estado
-1,Comprar panela,False
-2,Comprar arroz,True
+id,tarea,descripcion,estado
+1,Tarea matemáticas,Leer pág 25 del libro,false
+2,Pasear perro,En el parque Los Tamarindos,false
+3,Recoger a mi hermana,Recogerla en la oficina,false
+4,Pagar servicios,Usar tarjeta para pagar servicios,false
