@@ -1,6 +1,4 @@
 """Implementa métodos CRUD para importar con FastAPI."""
-from ast import Not
-from typing import Tuple
 import pandas as pd
 import json
 from pathlib import Path
@@ -63,3 +61,10 @@ def tarea_delete_json(tarea_id: int):
     df_tareas.drop(busqueda_indice_tarea, inplace=True)
     df_tareas.to_csv(data_path / "tareas.csv", index=None)
     return delete_result
+
+
+def tareas_delete_json():
+    df_tareas = pd.read_csv(data_path / "tareas.csv")
+    df_tareas.drop(df_tareas.index, inplace=True)
+    df_tareas.to_csv(data_path / "tareas.csv", index=None)
+    return tareas_read_json()

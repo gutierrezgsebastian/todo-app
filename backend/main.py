@@ -7,6 +7,7 @@ from logica.http_methods_data import (
     tarea_post_json,
     tarea_put_toggle_json,
     tarea_delete_json,
+    tareas_delete_json,
 )
 
 app = FastAPI()
@@ -52,3 +53,9 @@ def put_toggle_tarea(tarea_id: int, tarea: TareaTypeActualizar | None = None):
 def delete_tarea(tarea_id: int):
     """Eliminar una tarea específica."""
     return tarea_delete_json(tarea_id)
+
+
+@app.delete("/v1/delete_tareas/")
+def delete_tareas():
+    """Eliminar una tarea específica."""
+    return tareas_delete_json()
