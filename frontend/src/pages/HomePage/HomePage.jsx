@@ -1,9 +1,12 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { urlGetAll } from "../../components/config/generalFunction";
+import {
+  urlGetAll,
+  urlDeleteAll,
+} from "../../components/config/generalFunction";
 import SideBar from "../../components/SideBar/SideBar";
 import NavBar from "../../components/NavBar/NavBar";
 import "./HomePage.scss";
-import { httpGetTareas } from "../../helpers/httpMethods.js";
+import { httpGetTareas, httpDeleteTareas } from "../../helpers/httpMethods.js";
 import List from "../../components/List/List";
 
 const HomePage = () => {
@@ -19,10 +22,14 @@ const HomePage = () => {
     httpGetTareas(urlGetAll, setTareasState);
   };
 
+  const deleteNotas = async () => {
+    httpDeleteTareas(urlDeleteAll, setTareasState);
+    getNotas();
+  };
+
   // useEffect Methods
   useEffect(() => {
     getNotas();
-    console.log(tareasState);
   }, []);
 
   return (

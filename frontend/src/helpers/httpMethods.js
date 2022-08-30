@@ -8,3 +8,12 @@ const httpGetTareas = async (url, estado) => {
 };
 
 export { httpGetTareas };
+
+const httpDeleteTareas = async (url, estado) => {
+  await axios
+    .delete(url)
+    .then((response) => estado(response.data))
+    .catch((error) => console.log(error.message));
+};
+
+export { httpDeleteTareas };
