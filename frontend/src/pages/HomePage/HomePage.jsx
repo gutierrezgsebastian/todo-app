@@ -8,6 +8,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import "./HomePage.scss";
 import { httpGetTareas, httpDeleteTareas } from "../../helpers/httpMethods.js";
 import List from "../../components/List/List";
+import Button from "../../components/Button/Button";
 
 const HomePage = () => {
   const [toggle, setToggle] = useState(false);
@@ -18,18 +19,18 @@ const HomePage = () => {
   };
 
   // HTTP Methods
-  const getNotas = async () => {
+  const getTareas = async () => {
     httpGetTareas(urlGetAll, setTareasState);
   };
 
-  const deleteNotas = async () => {
+  const deleteTareas = async () => {
     httpDeleteTareas(urlDeleteAll, setTareasState);
-    getNotas();
+    getTareas();
   };
 
   // useEffect Methods
   useEffect(() => {
-    getNotas();
+    getTareas();
   }, []);
 
   return (
@@ -38,7 +39,11 @@ const HomePage = () => {
       <NavBar />
       <SideBar isOpen={toggle} fnToggle={fnToggle} />
       <h1 className="home">Notas</h1>
-      <List tareasState={tareasState} fnToggle={fnToggle} />
+      <List
+        tareasState={tareasState}
+        deleteTareas={deleteTareas}
+        fnToggle={fnToggle}
+      />
     </Fragment>
   );
 };
